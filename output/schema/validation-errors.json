@@ -1,5 +1,11 @@
 {
   "endpointErrors": {
+    "async_search.get": {
+      "request": [
+        "Request: missing json spec query parameter 'return_intermediate_results'"
+      ],
+      "response": []
+    },
     "async_search.submit": {
       "request": [
         "interface definition _types:QueryVectorBuilder - Property text_embedding is a single-variant and must be required",
@@ -7,15 +13,151 @@
       ],
       "response": []
     },
+    "cat.aliases": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'",
+        "Request: missing json spec query parameter 'time'"
+      ],
+      "response": []
+    },
+    "cat.allocation": {
+      "request": [
+        "Request: missing json spec query parameter 'time'"
+      ],
+      "response": []
+    },
+    "cat.component_templates": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'",
+        "Request: missing json spec query parameter 'time'"
+      ],
+      "response": []
+    },
+    "cat.count": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'",
+        "Request: missing json spec query parameter 'time'"
+      ],
+      "response": []
+    },
+    "cat.fielddata": {
+      "request": [
+        "Request: missing json spec query parameter 'time'"
+      ],
+      "response": []
+    },
+    "cat.health": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'"
+      ],
+      "response": []
+    },
+    "cat.master": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'",
+        "Request: missing json spec query parameter 'time'"
+      ],
+      "response": []
+    },
+    "cat.ml_datafeeds": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'"
+      ],
+      "response": []
+    },
+    "cat.nodeattrs": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'",
+        "Request: missing json spec query parameter 'time'"
+      ],
+      "response": []
+    },
+    "cat.pending_tasks": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'"
+      ],
+      "response": []
+    },
+    "cat.plugins": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'",
+        "Request: missing json spec query parameter 'time'"
+      ],
+      "response": []
+    },
+    "cat.repositories": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'",
+        "Request: missing json spec query parameter 'time'"
+      ],
+      "response": []
+    },
+    "cat.segments": {
+      "request": [
+        "Request: missing json spec query parameter 'time'",
+        "Request: missing json spec query parameter 'ignore_unavailable'",
+        "Request: missing json spec query parameter 'ignore_throttled'",
+        "Request: missing json spec query parameter 'allow_no_indices'",
+        "Request: missing json spec query parameter 'expand_wildcards'",
+        "Request: missing json spec query parameter 'allow_closed'"
+      ],
+      "response": []
+    },
+    "cat.snapshots": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'"
+      ],
+      "response": []
+    },
+    "cat.tasks": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'"
+      ],
+      "response": []
+    },
+    "cat.templates": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'",
+        "Request: missing json spec query parameter 'time'"
+      ],
+      "response": []
+    },
+    "cat.thread_pool": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'"
+      ],
+      "response": []
+    },
+    "cat.transforms": {
+      "request": [
+        "Request: missing json spec query parameter 'bytes'"
+      ],
+      "response": []
+    },
+    "cluster.allocation_explain": {
+      "request": [
+        "Request: missing json spec query parameter 'index'",
+        "Request: missing json spec query parameter 'shard'",
+        "Request: missing json spec query parameter 'primary'",
+        "Request: missing json spec query parameter 'current_node'"
+      ],
+      "response": []
+    },
     "cluster.get_component_template": {
       "request": [
-        "Request: query parameter 'flat_settings' does not exist in the json spec"
+        "Request: missing json spec query parameter 'settings_filter'"
       ],
       "response": []
     },
     "cluster.put_component_template": {
       "request": [
-        "Request: missing json spec query parameter 'timeout'"
+        "Request: missing json spec query parameter 'cause'"
+      ],
+      "response": []
+    },
+    "count": {
+      "request": [
+        "Request: missing json spec query parameter 'stats'"
       ],
       "response": []
     },
@@ -24,22 +166,38 @@
         "Request: query parameter 'if_primary_term' does not exist in the json spec",
         "Request: query parameter 'if_seq_no' does not exist in the json spec",
         "Request: query parameter 'op_type' does not exist in the json spec",
-        "Request: query parameter 'require_alias' does not exist in the json spec",
-        "Request: query parameter 'require_data_stream' does not exist in the json spec"
+        "Request: missing json spec query parameter 'slice'"
+      ],
+      "response": []
+    },
+    "delete": {
+      "request": [
+        "Request: missing json spec query parameter 'slice'"
       ],
       "response": []
     },
     "eql.search": {
       "request": [
-        "Request: query parameter 'allow_no_indices' does not exist in the json spec",
-        "Request: query parameter 'expand_wildcards' does not exist in the json spec",
-        "Request: query parameter 'ignore_unavailable' does not exist in the json spec"
+        "Request: missing json spec query parameter 'ccs_minimize_roundtrips'"
       ],
       "response": []
     },
-    "esql.async_query_get": {
+    "esql.async_query": {
       "request": [
-        "Request: query parameter 'format' does not exist in the json spec"
+        "Request: missing json spec query parameter 'allow_partial_dsl_filter'"
+      ],
+      "response": []
+    },
+    "esql.query": {
+      "request": [
+        "Request: missing json spec query parameter 'allow_partial_dsl_filter'"
+      ],
+      "response": []
+    },
+    "get": {
+      "request": [
+        "Request: missing json spec query parameter 'slice'",
+        "Request: missing json spec query parameter '_source_exclude_vectors'"
       ],
       "response": []
     },
@@ -49,8 +207,15 @@
       ],
       "response": []
     },
+    "ilm.explain_lifecycle": {
+      "request": [
+        "Request: missing json spec query parameter 'expand_wildcards'"
+      ],
+      "response": []
+    },
     "index": {
       "request": [
+        "Request: missing json spec query parameter 'slice'",
         "Request: missing json spec query parameter 'require_data_stream'"
       ],
       "response": []
@@ -61,9 +226,137 @@
         "interface definition indices.get_alias._types:NotFoundAliases / Behaviors - AdditionalProperties behavior for type 'indices.get_alias._types:NotFoundAliases' requires a 'behavior_meta' decorator with exactly 2 arguments (fieldname, description)"
       ]
     },
-    "ingest.get_ip_location_database": {
+    "indices.get_index_template": {
       "request": [
-        "Request: query parameter 'master_timeout' does not exist in the json spec"
+        "Request: missing json spec query parameter 'include_managed_fields'"
+      ],
+      "response": []
+    },
+    "indices.recovery": {
+      "request": [
+        "Request: missing json spec query parameter 'ignore_unavailable'",
+        "Request: missing json spec query parameter 'allow_no_indices'",
+        "Request: missing json spec query parameter 'expand_wildcards'"
+      ],
+      "response": []
+    },
+    "indices.resolve_index": {
+      "request": [
+        "Request: missing json spec query parameter 'mode'"
+      ],
+      "response": []
+    },
+    "inference.put": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_alibabacloud": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_amazonbedrock": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_anthropic": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_azureaistudio": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_azureopenai": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_cohere": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_elasticsearch": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_elser": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_googleaistudio": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_googlevertexai": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_hugging_face": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_jinaai": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_mistral": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_openai": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_voyageai": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.put_watsonx": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.stream_completion": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "inference.update": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
       ],
       "response": []
     },
@@ -74,54 +367,78 @@
       ],
       "response": []
     },
+    "ml.stop_datafeed": {
+      "request": [
+        "Request: missing json spec query parameter 'close_job'"
+      ],
+      "response": []
+    },
+    "monitoring.bulk": {
+      "request": [
+        "Request: different number of urls in the json spec",
+        "Request: path parameter 'type' does not exist in the json spec"
+      ],
+      "response": []
+    },
     "msearch": {
       "request": [
-        "Request: query parameter 'allow_no_indices' does not exist in the json spec",
-        "Request: query parameter 'expand_wildcards' does not exist in the json spec",
-        "Request: query parameter 'ignore_throttled' does not exist in the json spec",
-        "Request: query parameter 'ignore_unavailable' does not exist in the json spec",
-        "Request: query parameter 'include_named_queries_score' does not exist in the json spec",
-        "Request: query parameter 'routing' does not exist in the json spec"
+        "Request: missing json spec query parameter 'index'",
+        "Request: missing json spec query parameter 'project_routing'"
+      ],
+      "response": []
+    },
+    "msearch_template": {
+      "request": [
+        "Request: missing json spec query parameter 'project_routing'"
       ],
       "response": []
     },
     "open_point_in_time": {
       "request": [
-        "Request: query parameter 'max_concurrent_shard_requests' does not exist in the json spec"
+        "Request: missing json spec query parameter 'slice'"
       ],
       "response": []
     },
     "reindex": {
       "request": [
-        "Request: query parameter 'require_alias' does not exist in the json spec",
         "Request: missing json spec query parameter 'max_docs'"
+      ],
+      "response": []
+    },
+    "search": {
+      "request": [
+        "Request: missing json spec query parameter 'slice'",
+        "Request: missing json spec query parameter '_source_exclude_vectors'"
       ],
       "response": []
     },
     "search_mvt": {
       "request": [
-        "Request: query parameter 'grid_agg' does not exist in the json spec",
         "Request: missing json spec query parameter 'track_total_hits'"
       ],
       "response": []
     },
-    "searchable_snapshots.clear_cache": {
+    "security.get_role": {
       "request": [
-        "Request: missing json spec query parameter 'index'"
+        "Request: missing json spec query parameter 'include_implicit'"
       ],
       "response": []
     },
-    "security.get_user_privileges": {
+    "security.get_service_accounts": {
       "request": [
-        "Request: query parameter 'application' does not exist in the json spec",
-        "Request: query parameter 'priviledge' does not exist in the json spec",
-        "Request: query parameter 'username' does not exist in the json spec"
+        "Request: missing json spec query parameter 'type'"
       ],
       "response": []
     },
     "security.grant_api_key": {
       "request": [
         "Request: missing json spec query parameter 'refresh'"
+      ],
+      "response": []
+    },
+    "simulate.ingest": {
+      "request": [
+        "Request: missing json spec query parameter 'merge_type'"
       ],
       "response": []
     },
@@ -133,7 +450,25 @@
     },
     "snapshot.repository_analyze": {
       "request": [
-        "Request: query parameter 'register_operation_count' does not exist in the json spec"
+        "Request: missing json spec query parameter 'check_overwrite_protection'"
+      ],
+      "response": []
+    },
+    "synonyms.get_synonym": {
+      "request": [
+        "Request: missing json spec query parameter 'search_after'"
+      ],
+      "response": []
+    },
+    "synonyms.put_synonym": {
+      "request": [
+        "Request: missing json spec query parameter 'append'"
+      ],
+      "response": []
+    },
+    "tasks.get": {
+      "request": [
+        "Request: missing json spec query parameter 'follow_relocations'"
       ],
       "response": []
     },
@@ -143,6 +478,30 @@
         "interface definition transform._types:RetentionPolicyContainer - Property time is a single-variant and must be required",
         "interface definition transform._types:SyncContainer - Property time is a single-variant and must be required"
       ]
+    },
+    "transform.get_transform_stats": {
+      "request": [
+        "Request: missing json spec query parameter 'basic'"
+      ],
+      "response": []
+    },
+    "transform.schedule_now_transform": {
+      "request": [
+        "Request: missing json spec query parameter 'defer'"
+      ],
+      "response": []
+    },
+    "transform.start_transform": {
+      "request": [
+        "Request: missing json spec query parameter 'initial_delay'"
+      ],
+      "response": []
+    },
+    "update": {
+      "request": [
+        "Request: missing json spec query parameter 'slice'"
+      ],
+      "response": []
     },
     "watcher.execute_watch": {
       "request": [
