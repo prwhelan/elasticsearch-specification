@@ -1,8 +1,8 @@
 {
   "inference.update": {
     "documentation": {
-      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/update-inference-api.html",
-      "description": "Update inference"
+      "url": "https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-inference-update",
+      "description": "Update an inference endpoint"
     },
     "stability": "stable",
     "visibility": "public",
@@ -27,8 +27,16 @@
           "methods": ["PUT"],
           "parts": {
             "task_type": {
-              "type": "string",
-              "description": "The task type"
+              "type": "enum",
+              "description": "The task type",
+              "options": [
+                "chat_completion",
+                "completion",
+                "embedding",
+                "rerank",
+                "sparse_embedding",
+                "text_embedding"
+              ]
             },
             "inference_id": {
               "type": "string",
@@ -39,7 +47,14 @@
       ]
     },
     "body": {
-      "description": "The inference endpoint's task and service settings"
+      "description": "The inference endpoint's task and service settings",
+      "required": true
+    },
+    "params": {
+      "timeout": {
+        "type": "time",
+        "description": "Specifies the amount of time to wait for the inference endpoint to be updated. The default depends on the task type: 120s for completion and chat_completion, and 30s for all other task types."
+      }
     }
   }
 }
