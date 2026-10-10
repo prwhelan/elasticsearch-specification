@@ -2,7 +2,7 @@
   "profiling.status": {
     "documentation": {
       "url": "https://www.elastic.co/guide/en/observability/current/universal-profiling.html",
-      "description": "Returns basic information about the status of Universal Profiling."
+      "description": "Returns basic information about the status of Universal Profiling"
     },
     "stability": "stable",
     "visibility": "private",
@@ -20,10 +20,12 @@
     "params": {
       "master_timeout": {
         "type": "time",
+        "default": "30s",
         "description": "Explicit operation timeout for connection to master node"
       },
       "timeout": {
         "type": "time",
+        "default": "30s",
         "description": "Explicit operation timeout"
       },
       "wait_for_resources_created": {
