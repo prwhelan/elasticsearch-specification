@@ -1625,7 +1625,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -7960,7 +7961,7 @@
           {
             "in": "path",
             "name": "index",
-            "description": "The name of the index to explain",
+            "description": "Comma-separated list of index names to explain",
             "required": true,
             "deprecated": false,
             "schema": {
@@ -8264,7 +8265,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -8448,7 +8450,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -10127,7 +10130,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -10449,7 +10453,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -10536,7 +10541,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -10617,7 +10623,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -10704,7 +10711,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -10791,7 +10799,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -10878,7 +10887,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -10985,7 +10995,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11075,7 +11086,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11161,7 +11173,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11248,7 +11261,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11335,7 +11349,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11422,7 +11437,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11500,7 +11516,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11587,7 +11604,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11674,7 +11692,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11749,7 +11768,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11849,7 +11869,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -11950,7 +11971,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -12041,7 +12063,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -65584,7 +65607,7 @@
       "async_search.submit-allow_no_indices": {
         "in": "query",
         "name": "allow_no_indices",
-        "description": "Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)",
+        "description": "Whether to allow (1) wildcard index expressions that match no indices and (2) requests where the final resolved set is empty.",
         "deprecated": false,
         "schema": {
           "type": "boolean"
@@ -65957,7 +65980,7 @@
       "async_search.submit-size": {
         "in": "query",
         "name": "size",
-        "description": "Number of hits to return (default: 10)",
+        "description": "Number of hits to return",
         "deprecated": false,
         "schema": {
           "type": "number"
@@ -65967,7 +65990,7 @@
       "async_search.submit-from": {
         "in": "query",
         "name": "from",
-        "description": "Starting offset (default: 0)",
+        "description": "Starting offset",
         "deprecated": false,
         "schema": {
           "type": "number"
@@ -67115,7 +67138,7 @@
       "eql.search-index": {
         "in": "path",
         "name": "index",
-        "description": "The name of the index to scope the operation",
+        "description": "Comma-separated list of index names to scope the operation",
         "required": true,
         "deprecated": false,
         "schema": {
@@ -67126,6 +67149,7 @@
       "eql.search-allow_no_indices": {
         "in": "query",
         "name": "allow_no_indices",
+        "description": "Whether to allow (1) wildcard index expressions that match no indices and (2) requests where the final resolved set is empty.",
         "deprecated": false,
         "schema": {
           "type": "boolean"
@@ -67155,6 +67179,7 @@
       "eql.search-expand_wildcards": {
         "in": "query",
         "name": "expand_wildcards",
+        "description": "Whether to expand wildcard expression to concrete indices that are open, closed or both.",
         "deprecated": false,
         "schema": {
           "$ref": "#/components/schemas/_types.ExpandWildcards"
@@ -71484,7 +71509,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "index": {
         "content": {
@@ -71596,7 +71622,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "indices.put_alias": {
         "content": {
@@ -71933,7 +71960,8 @@
               ]
             }
           }
-        }
+        },
+        "required": true
       },
       "inference.put": {
         "content": {
@@ -72299,7 +72327,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "scripts_painless_execute": {
         "content": {
@@ -72336,7 +72365,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "scroll": {
         "content": {
@@ -73101,7 +73131,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "termvectors": {
         "content": {

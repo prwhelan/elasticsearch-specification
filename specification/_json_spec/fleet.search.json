@@ -2,7 +2,7 @@
   "fleet.search": {
     "documentation": {
       "url": null,
-      "description": "Search API where the search will only be executed after specified checkpoints are available due to a refresh. This API is designed for internal use by the fleet server project."
+      "description": "Run a Fleet search"
     },
     "stability": "experimental",
     "visibility": "public",
@@ -19,6 +19,21 @@
             "index": {
               "type": "string",
               "description": "The index name to search."
+            }
+          }
+        },
+        {
+          "path": "/{index}/{_slice}/_fleet/_fleet_search",
+          "methods": ["GET", "POST"],
+          "parts": {
+            "index": {
+              "type": "string",
+              "description": "The index name to search."
+            },
+            "_slice": {
+              "type": "list",
+              "description": "Slice identifier(s) for a slice-enabled index (`index.slice.enabled=true`). A single slice, a comma-separated list (for example `tenant-a,tenant-b`), or the reserved token `_all` to search all slices.",
+              "feature_flag": "es.slice_indexing_feature_flag_enabled"
             }
           }
         }
@@ -41,7 +56,8 @@
       }
     },
     "body": {
-      "description": "The search definition using the Query DSL"
+      "description": "The search definition using the Query DSL",
+      "required": true
     }
   }
 }
