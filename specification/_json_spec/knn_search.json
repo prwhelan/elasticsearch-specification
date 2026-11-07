@@ -1,15 +1,15 @@
 {
   "knn_search": {
     "documentation": {
-      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/search-search.html",
-      "description": "Performs a kNN search."
+      "url": null,
+      "description": "Performs a kNN search"
     },
     "stability": "experimental",
     "deprecated": {
       "version": "8.4.0",
       "description": "The kNN search API has been replaced by the `knn` option in the search API."
     },
-    "visibility": "public",
+    "visibility": "private",
     "headers": {
       "accept": ["application/json"],
       "content_type": ["application/json"]
@@ -35,7 +35,8 @@
       }
     },
     "body": {
-      "description": "The search definition"
+      "description": "The search definition",
+      "required": true
     }
   }
 }
