@@ -1,8 +1,8 @@
 {
   "mtermvectors": {
     "documentation": {
-      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/docs-multi-termvectors.html",
-      "description": "Returns multiple termvectors in one request."
+      "url": "https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-mtermvectors",
+      "description": "Get multiple term vectors"
     },
     "stability": "stable",
     "visibility": "public",
@@ -23,6 +23,21 @@
             "index": {
               "type": "string",
               "description": "The index in which the document resides."
+            }
+          }
+        },
+        {
+          "path": "/{index}/{_slice}/_mtermvectors",
+          "methods": ["GET", "POST"],
+          "parts": {
+            "index": {
+              "type": "string",
+              "description": "The index in which the document resides."
+            },
+            "_slice": {
+              "type": "string",
+              "description": "Default slice identifier for a slice-enabled index (`index.slice.enabled=true`); applied to items that don't provide their own",
+              "feature_flag": "es.slice_indexing_feature_flag_enabled"
             }
           }
         }
@@ -67,15 +82,16 @@
         "description": "Specify the node or shard the operation should be performed on (default: random) .Applies to all returned documents unless otherwise specified in body \"params\" or \"docs\"."
       },
       "routing": {
-        "type": "string",
+        "type": "list",
         "description": "Specific routing value. Applies to all returned documents unless otherwise specified in body \"params\" or \"docs\"."
       },
       "realtime": {
         "type": "boolean",
+        "default": true,
         "description": "Specifies if requests are real-time as opposed to near-real-time (default: true)."
       },
       "version": {
-        "type": "number",
+        "type": "long",
         "description": "Explicit version number for concurrency control"
       },
       "version_type": {
